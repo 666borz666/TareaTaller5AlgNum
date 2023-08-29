@@ -55,7 +55,7 @@ def contarRepetidos (n, buscar):
     else:
         return "El número a buscar no se encuentra en la cifra numérica."
 
-#funcion 3: indicar la suma de los dígitos
+#funcion: indicar la suma de los dígitos
 def indicarSuma (n):
     """
     """
@@ -132,8 +132,56 @@ def convertirBinario(n):
         n=n//2
         contador*=10
     return binario
+
+#funcion: crear digito solo con impares
+def crearDigitoImpar(n):
+    """
+    """
+    i=0
+    numImpar=0
+    while n!=0:
+        num=n%10
+        if (num%2)==0:
+            numImpar+=0
+            i+=0
+        else:
+            numImpar=numImpar+(num*(10**i))
+            i+=1
+        n=n//10
+    return numImpar
+
+#funcion:  eliminar en el primero los valores repetidos
+def eliminarRepetidos(n1,n2):
+    """
+    """
+    return 
+
+#funcion: Convertir de decimal a octal
+def convertirOctal(n):
+    """
+    """
+    numOct=0
+    i=0
+    while n>0:
+        num=n%8
+        numOct+=num*(10**i)
+        i+=1
+        n=n//8
+    return numOct
+
+#funcion: factorial de un número:
+def factorialNum(n):
+    """
+    """
+    i=1
+    fact=1
+    while i<=n:
+        fact*=i
+        i+=1
+    return fact
+
 #prueba
 n=int(input("n: "))
-print(convertirBinario(n))
+print(factorialNum(n))
 
 
