@@ -1,6 +1,6 @@
 #Elaborado por: Daniel Campos y Alejadro Madrigal
-#Creación: 28/08/2023 8:37 am
-#Ult mod: 28/08/2023 
+#Creación: 28/08/2023 Hora: 8:37 am
+#Ult mod: 28/08/2023 Hora: 9:37 pm
 #Versión 3.10.6
 
 #val funciones
@@ -94,31 +94,46 @@ def verificarParidad (n, posicion):
     return ""
 
 #funcion: Número palíndromo
-def reconocerPolindromo(n):
+def reconocerPalindromo(n):
     """
     """
-    contador=contarDigitos(n)
-    num=0
-    while n!=0:
-        x=n//100
-        x+(10**contador-1)
-        num+=x
-    return num
+    numeroOriginal=n
+    palindromo=0
+    while n>0:
+        num = n % 10
+        palindromo=(palindromo*10)+num
+        n=n//10
+    if numeroOriginal!=palindromo:
+        return "Su número no es palindromo"
+    else:
+        return "Su número es palindromo"
+
 
 #funcion: Invertir número
 def invertirNumero(n):
     """
     """
-    nd=0
-    x=contarDigitos(n)
-    while n!=0:
-        nd+=(n%10*(10**x-1))
-        n//=10
-    return nd
+    invertir=0
+    while n>0:
+        num = n % 10
+        invertir=(invertir*10)+num
+        n=n//10
+    return invertir
 
-
+#función: número binario
+def convertirBinario(n):
+    """
+    """
+    binario=0
+    contador=1
+    while n>0:
+        num = n % 2
+        binario+=(num*contador)
+        n=n//2
+        contador*=10
+    return binario
 #prueba
 n=int(input("n: "))
-print(invertirNumero(n))
+print(convertirBinario(n))
 
 
