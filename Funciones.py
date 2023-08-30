@@ -156,19 +156,23 @@ def eliminarRepetidos(n1,n2):
     """
     i=0
     numImp=0
-    aux2=n2
     aux1=n1
-    while aux2!=0:
+    while aux1!=0:
         num1=aux1%10
-        num2=aux2%10
-        if num1==num2:
-            aux2=n2
-            aux1=aux1//10
-            i+=0
-        aux2//=10
-    numImp+=num1*(10**i)
-    aux2=n2
-    aux1=n1
+        aux2=n2
+        repetido=False
+        while aux2!=0:
+            num2=aux2%10
+            if num1==num2:
+                repetido=True
+                break
+            aux2//=10
+        if repetido==False:
+            numImp+=num1*(10 ** i)
+            i+=1
+        aux1//=10
+    if numImp==0:
+        print("Todos los valores fueron eliminados")
     return numImp
 
 #funcion: Convertir de decimal a octal
