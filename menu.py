@@ -28,11 +28,11 @@ def opcioncompararDigitos(n1,n2):
     while True:
         try:
             print("Comparar dígitos y números.")
-            n1=int(input('Digite un numero entero positivo:'))
-            n2=int(input('Digite otro numero entero positivo:'))
+            n1=int(input('Digite un numero entero positivo: '))
+            n2=int(input('Digite otro numero entero positivo: '))
             return  print(compararDigitosAux(n1,n2))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")   
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
 
 #2
 def opcioncontarRepetidosAux(n, buscar):
@@ -58,11 +58,11 @@ def opcioncontarRepetidos(n, buscar):
     while True:
         try:
             print("¿Cuántas veces aparece un dígito en una cifra entera?")
-            n=int(input('Número a buscar:'))
-            buscar=int(input('Digite otro numero entero positivo:'))
+            n=int(input('Digite un número entero positivo: '))
+            buscar=int(input('Número a buscar: '))
             return  print(opcioncontarRepetidosAux(n, buscar))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")   
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
 
 #3
 def opcionindicarSumaAux(n):
@@ -91,7 +91,7 @@ def opcionindicarSuma(n):
             n=int(input('Digite un numero entero positivo: '))
             return print(opcionindicarSumaAux(n))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.") 
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
         
 #4
 def opcionrevisarBinarioAux(n):
@@ -120,7 +120,7 @@ def  opcionrevisarBinario(n):
             n=int(input('Digite un numero entero positivo: '))
             return print(opcionrevisarBinarioAux(n))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.") 
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
 
 #5
 def opcionverificarParidadAux(n, posicion):
@@ -130,8 +130,8 @@ def opcionverificarParidadAux(n, posicion):
     S: Función seleccionada
     """
     if isinstance(n and posicion,int)==True:
-        contarRepetidos(n, posicion)
-        if n<=0 and posicion<=0:
+        verificarParidad(n, posicion)
+        if n<=0 or posicion<=0:
             return "El número debe ser diferente de cero."
     else: 
         return "Debe ingresar sólo números."
@@ -145,12 +145,12 @@ def opcionverificarParidad(n, posicion):
     """
     while True:
         try:
-            print("¿Cuántas veces aparece un dígito en una cifra entera?")
-            n=int(input('Número a buscar:'))
-            posicion=int(input('Digite otro numero entero positivo:'))
-            return  print(opcioncontarRepetidosAux(n, posicion))
+            print("Verificar la paridad de un dígito en una posición dada.")
+            n=int(input('Número entero: '))
+            posicion=int(input('Posición a buscar: '))
+            return  print(opcionverificarParidadAux(n, posicion))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")   
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n")    
 
 #6
 def opcionreconocerPalindromoAux(n):
@@ -160,7 +160,7 @@ def opcionreconocerPalindromoAux(n):
     S: Función seleccionada
     """
     if isinstance(n,int)==True:
-        revisarBinario(n)
+        reconocerPalindromo(n)
         if n<=0:
             return "El número debe ser diferente de cero."
     else: 
@@ -179,7 +179,7 @@ def  opcionreconocerPalindromo(n):
             n=int(input('Digite un numero entero positivo: '))
             return print(opcionreconocerPalindromoAux(n))
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.") 
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
 
 #menu
 def menu():
@@ -217,7 +217,7 @@ def menu():
             else:
                 return print ("Opción inválida")
         except:
-            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")
+            return print("\n 1. Debe ingresar números enteros únicamente. \n 2. No ingrese caracteres diferentes de números. \n") 
     
 def menuAux(n):
     """
