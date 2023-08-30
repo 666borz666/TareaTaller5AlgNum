@@ -154,7 +154,22 @@ def crearDigitoImpar(n):
 def eliminarRepetidos(n1,n2):
     """
     """
-    return 
+    i=0
+    numImp=0
+    aux2=n2
+    aux1=n1
+    while aux2!=0:
+        num1=aux1%10
+        num2=aux2%10
+        if num1==num2:
+            aux2=n2
+            aux1=aux1//10
+            i+=0
+        aux2//=10
+    numImp+=num1*(10**i)
+    aux2=n2
+    aux1=n1
+    return numImp
 
 #funcion: Convertir de decimal a octal
 def convertirOctal(n):
@@ -181,7 +196,8 @@ def factorialNum(n):
     return fact
 
 #prueba
-n=int(input("n: "))
-print(factorialNum(n))
+n1=int(input("n1: "))
+n2=int(input("n2: "))
+print(eliminarRepetidos(n1,n2))
 
 
