@@ -2,9 +2,6 @@
 #Creación: 28/08/2023 Hora: 8:37 am
 #Ult mod: 28/08/2023 Hora: 9:37 pm
 #Versión 3.10.6
-
-#val funciones
-
 #def funciones
 #contar dígitos
 def contarDigitos(n):
@@ -65,7 +62,7 @@ def indicarSuma (n):
         if x!=0:
             suma+=x
         n=n//10
-    return suma
+    return print(suma)
 
 #funcion:  Reciba un valor, indique si es binario o no
 def revisarBinario(n):
@@ -198,10 +195,3 @@ def factorialNum(n):
         fact*=i
         i+=1
     return fact
-
-#prueba
-n1=int(input("n1: "))
-n2=int(input("n2: "))
-print(eliminarRepetidos(n1,n2))
-
-
