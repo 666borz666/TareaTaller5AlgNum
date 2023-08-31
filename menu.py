@@ -1,6 +1,6 @@
 #Elaborado por: Daniel Campos y Alejadro Madrigal
 #Creación: 28/08/2023 9:48 am
-#Ult mod: 28/08/2023 
+#Ult mod: 
 #Versión 3.10.6
 from Funciones import *
 
@@ -270,7 +270,7 @@ def opcionCrearDigitoImpar(n):
     """
     while True:
         try:
-            print("Convierte en número impar a un número entero")
+            print("Elimina los dígitos pares de un número.")
             n = int(input("Digite un número: "))
             return print(crearDigitoImparAux(n))
         except:
@@ -344,8 +344,8 @@ def factorialNumAux(n):
     """
     if isinstance(n, int) == True:
         factorialNum(n)
-        if n <= 0:
-            return "El número debe ser diferente de cero."
+        if n < 0:
+            return "El número debe ser mayor o igual a cero."
     else:
         return "Debe ingresar sólo números."
     return ""

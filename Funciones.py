@@ -1,9 +1,10 @@
 #Elaborado por: Daniel Campos y Alejadro Madrigal
 #Creación: 28/08/2023 Hora: 8:37 am
-#Ult mod: 28/08/2023 Hora: 9:37 pm
+#Ult mod: 
 #Versión 3.10.6
+
 #def funciones
-#contar dígitos
+#contar dígitos 0
 def contarDigitos(n):
     """
     Función: Cuenta los dígitos de un número entero
@@ -17,7 +18,7 @@ def contarDigitos(n):
         n//=10
     return contador
     
-#funcion: comparar dígitos y números 2
+#funcion: comparar dígitos y números 1
 def compararDigitos(n1,n2):
     """
     Función: Compara si los números enteros colocados son igual en tamaño y en valor
@@ -44,7 +45,7 @@ def compararDigitos(n1,n2):
     else:
         return print("Los dígitos de los números no son iguales.")
 
-#funcion: cuántas veces aparece un dígito en una cifra entera 3
+#funcion: cuántas veces aparece un dígito en una cifra entera 2
 def contarRepetidos (n, buscar):
     """
     Función: Busca un dígito de un número que se coloca
@@ -61,7 +62,7 @@ def contarRepetidos (n, buscar):
     else:
         return "El número a buscar no se encuentra en la cifra numérica."
 
-#funcion: indicar la suma de los dígitos 4
+#funcion: indicar la suma de los dígitos 3
 def indicarSuma (n):
     """
     Función: Suma los dígitos de un número entero
@@ -76,7 +77,7 @@ def indicarSuma (n):
         n=n//10
     return suma
 
-#funcion:  Reciba un valor, indique si es binario o no
+#funcion:  Reciba un valor, indique si es binario o no 4
 def revisarBinario(n):
     """
     Función: Verifica que los números digitados sean binarios 5
@@ -90,7 +91,7 @@ def revisarBinario(n):
         n = n // 10
     return True
 
-#funcion: verificar la paridad de un dígito en una posición dada 6
+#funcion: verificar la paridad de un dígito en una posición dada 5
 def verificarParidad (n, posicion):
     """
     Función: Verifica si en X posición, existe un dígito par
@@ -111,7 +112,7 @@ def verificarParidad (n, posicion):
                 print(False)          
     return ""
 
-#funcion: Número palíndromo 7
+#funcion: Número palíndromo 6
 def reconocerPalindromo(n):
     """
     Función: Verifica si el número es palíndromo
@@ -130,7 +131,7 @@ def reconocerPalindromo(n):
         return "Su número es palindromo"
 
 
-#funcion: Invertir número 8
+#funcion: Invertir número 7
 def invertirNumero(n):
     """
     Función: Invierte cualquier número entero que se digíte
@@ -144,7 +145,7 @@ def invertirNumero(n):
         n=n//10
     return invertir
 
-#función: número binario 9
+#función: número binario 8
 def convertirBinario(n):
     """
     Función: Convierte cualquier número decimal que se digíte en binario
@@ -160,7 +161,7 @@ def convertirBinario(n):
         contador*=10
     return print(binario)
 
-#funcion: crear digito solo con impares 10
+#funcion: crear digito solo con impares 9
 def crearDigitoImpar(n):
     """
     Función: Crea un número con solo impares a partir de un número entero
@@ -184,7 +185,7 @@ def crearDigitoImpar(n):
 
     return print(numImpar)
 
-#funcion:  eliminar en el primero los valores repetidos 11
+#funcion:  eliminar en el primero los valores repetidos 10
 def eliminarRepetidos(n1,n2):
     """
     Función: Elimina del número 1 los números repetidos que están en el número 2
@@ -212,7 +213,7 @@ def eliminarRepetidos(n1,n2):
         print("Todos los valores fueron eliminados")
     return print(numImp)
 
-#funcion: Convertir de decimal a octal 12
+#funcion: Convertir de decimal a octal 11
 def convertirOctal(n):
     """
     Función: Convierte de decimal a octal
@@ -228,7 +229,7 @@ def convertirOctal(n):
         n=n//8
     return print(numOct)
 
-#funcion: factorial de un número: 13
+#funcion: factorial de un número: 12
 def factorialNum(n):
     """
     Función: Calcula el factorial de un número
