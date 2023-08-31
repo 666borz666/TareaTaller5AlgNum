@@ -1,6 +1,6 @@
 #Elaborado por: Daniel Campos y Alejadro Madrigal
 #Creación: 28/08/2023 Hora: 8:37 am
-#Ult mod: 
+#Ult mod: 31/08/2023 3:29pm
 #Versión 3.10.6
 
 #def funciones
