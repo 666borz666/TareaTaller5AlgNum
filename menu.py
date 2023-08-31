@@ -151,7 +151,7 @@ def opcionverificarParidad(n, posicion):
     """
     while True:
         try:
-            print("Verificar la paridad de un dígito en una posición dada.")
+            print("\n Verificar la paridad de un dígito en una posición dada.\n Recuerde que se empieza a contar desde 0")
             n = int(input('Número entero: '))
             posicion = int(input('Posición a buscar: '))
             return print(opcionverificarParidadAux(n, posicion))

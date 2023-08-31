@@ -58,7 +58,7 @@ def contarRepetidos (n, buscar):
             contador+=1
         n//=10
     if contador !=0:
-        return contador
+        return print(contador)
     else:
         return "El número a buscar no se encuentra en la cifra numérica."
 
@@ -75,7 +75,7 @@ def indicarSuma (n):
         if x!=0:
             suma+=x
         n=n//10
-    return suma
+    return print(suma)
 
 #funcion:  Reciba un valor, indique si es binario o no 4
 def revisarBinario(n):
@@ -87,9 +87,9 @@ def revisarBinario(n):
     while n > 0:
         num = n % 10
         if num != 0 and num != 1:
-            return False
+            return print(False)
         n = n // 10
-    return True
+    return print(True)
 
 #funcion: verificar la paridad de un dígito en una posición dada 5
 def verificarParidad (n, posicion):
@@ -126,9 +126,9 @@ def reconocerPalindromo(n):
         palindromo=(palindromo*10)+num
         n=n//10
     if numeroOriginal!=palindromo:
-        return "Su número no es palindromo"
+        return print("Su número no es palindromo")
     else:
-        return "Su número es palindromo"
+        return print("Su número es palindromo")
 
 
 #funcion: Invertir número 7
@@ -143,7 +143,7 @@ def invertirNumero(n):
         num = n % 10
         invertir=(invertir*10)+num
         n=n//10
-    return invertir
+    return print(invertir)
 
 #función: número binario 8
 def convertirBinario(n):
