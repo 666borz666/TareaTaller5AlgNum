@@ -6,6 +6,9 @@
 #contar dígitos
 def contarDigitos(n):
     """
+    Función: Cuenta los dígitos de un número entero
+    Entrada: Número entero
+    Salida: Cantidad de dígitos
     """
     contador=0
     while n!=0:
@@ -14,9 +17,12 @@ def contarDigitos(n):
         n//=10
     return contador
     
-#funcion: comparar dígitos y números
+#funcion: comparar dígitos y números 2
 def compararDigitos(n1,n2):
     """
+    Función: Compara si los números enteros colocados son igual en tamaño y en valor
+    Entrada: Dos números enteros
+    Salida: Comparador
     """
     contador1=0
     contador2=0
@@ -38,9 +44,12 @@ def compararDigitos(n1,n2):
     else:
         return print("Los dígitos de los números no son iguales.")
 
-#funcion: cuántas veces aparece un dígito en una cifra entera
+#funcion: cuántas veces aparece un dígito en una cifra entera 3
 def contarRepetidos (n, buscar):
     """
+    Función: Busca un dígito de un número que se coloca
+    Entrada: Número entero y número a buscar
+    Salida: Contador o respuesta.
     """
     contador=0
     while n!=0:
@@ -48,13 +57,16 @@ def contarRepetidos (n, buscar):
             contador+=1
         n//=10
     if contador !=0:
-        return print("El número", buscar, "aparece:",contador, "veces.")
+        return contador
     else:
         return "El número a buscar no se encuentra en la cifra numérica."
 
-#funcion: indicar la suma de los dígitos
+#funcion: indicar la suma de los dígitos 4
 def indicarSuma (n):
     """
+    Función: Suma los dígitos de un número entero
+    Entrada: Número
+    Salida: Suma
     """
     suma=0
     while n>0:
@@ -62,19 +74,28 @@ def indicarSuma (n):
         if x!=0:
             suma+=x
         n=n//10
-    return print("La suma de los dígitos es igual a:",suma)
+    return suma
 
 #funcion:  Reciba un valor, indique si es binario o no
 def revisarBinario(n):
-    if n%10!=0 and n%10!=1:
-        print(False)
-    else:
-        print(True)
-    return ""
+    """
+    Función: Verifica que los números digitados sean binarios 5
+    Entrada: Número binario
+    Salida: True o False
+    """
+    while n > 0:
+        num = n % 10
+        if num != 0 and num != 1:
+            return False
+        n = n // 10
+    return True
 
-#funcion: verificar la paridad de un dígito en una posición dada
+#funcion: verificar la paridad de un dígito en una posición dada 6
 def verificarParidad (n, posicion):
     """
+    Función: Verifica si en X posición, existe un dígito par
+    Entrada: Número
+    Salida: True o False
     """
     contador=0
     while n!=0:
@@ -90,9 +111,12 @@ def verificarParidad (n, posicion):
                 print(False)          
     return ""
 
-#funcion: Número palíndromo
+#funcion: Número palíndromo 7
 def reconocerPalindromo(n):
     """
+    Función: Verifica si el número es palíndromo
+    Entrada: Número
+    Salida: Palíndromo o no
     """
     numeroOriginal=n
     palindromo=0
@@ -101,14 +125,17 @@ def reconocerPalindromo(n):
         palindromo=(palindromo*10)+num
         n=n//10
     if numeroOriginal!=palindromo:
-        return print("Su número no es palindromo")
+        return "Su número no es palindromo"
     else:
-        return print("Su número es palindromo")
+        return "Su número es palindromo"
 
 
-#funcion: Invertir número
+#funcion: Invertir número 8
 def invertirNumero(n):
     """
+    Función: Invierte cualquier número entero que se digíte
+    Entrada: Número
+    Salida: Número invertido
     """
     invertir=0
     while n>0:
@@ -117,9 +144,12 @@ def invertirNumero(n):
         n=n//10
     return invertir
 
-#función: número binario
+#función: número binario 9
 def convertirBinario(n):
     """
+    Función: Convierte cualquier número decimal que se digíte en binario
+    Entrada: Número decimal
+    Salida: Binario
     """
     binario=0
     contador=1
@@ -128,11 +158,14 @@ def convertirBinario(n):
         binario+=(num*contador)
         n=n//2
         contador*=10
-    return binario
+    return print(binario)
 
-#funcion: crear digito solo con impares
+#funcion: crear digito solo con impares 10
 def crearDigitoImpar(n):
     """
+    Función: Crea un número con solo impares a partir de un número entero
+    Entrada: Núméro entero
+    Salida: Número impar
     """
     i=0
     numImpar=0
@@ -141,15 +174,22 @@ def crearDigitoImpar(n):
         if (num%2)==0:
             numImpar+=0
             i+=0
-        else:
+        elif num%2!=0:
             numImpar=numImpar+(num*(10**i))
             i+=1
         n=n//10
-    return numImpar
+    if numImpar==0:
+        print("No existen números impares en su número")
 
-#funcion:  eliminar en el primero los valores repetidos
+
+    return print(numImpar)
+
+#funcion:  eliminar en el primero los valores repetidos 11
 def eliminarRepetidos(n1,n2):
     """
+    Función: Elimina del número 1 los números repetidos que están en el número 2
+    Entrada: n1 y n2, números enteros
+    Salida: Número sin repetidos
     """
     i=0
     numImp=0
@@ -170,11 +210,14 @@ def eliminarRepetidos(n1,n2):
         aux1//=10
     if numImp==0:
         print("Todos los valores fueron eliminados")
-    return numImp
+    return print(numImp)
 
-#funcion: Convertir de decimal a octal
+#funcion: Convertir de decimal a octal 12
 def convertirOctal(n):
     """
+    Función: Convierte de decimal a octal
+    Entrada: Número entero en decimal
+    Salida: Número entero en octal
     """
     numOct=0
     i=0
@@ -183,15 +226,18 @@ def convertirOctal(n):
         numOct+=num*(10**i)
         i+=1
         n=n//8
-    return numOct
+    return print(numOct)
 
-#funcion: factorial de un número:
+#funcion: factorial de un número: 13
 def factorialNum(n):
     """
+    Función: Calcula el factorial de un número
+    Entrada: Número entero
+    Salida: Factorial del número ya calculado
     """
     i=1
     fact=1
     while i<=n:
         fact*=i
         i+=1
-    return fact
+    return print(fact)
